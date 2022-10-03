@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div align="center" class="header">
+      <h1>App Gestion de Budget</h1>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Incomings -->
+          <div class="income-amount-container">
+            <h3>Revenu(s)</h3>
+            <p class="hide error" id="budget-error">
+              Value cannot be empty or negative
+            </p>
+            <input
+              type="text"
+              class="product-title-income"
+              id="product-title-income"
+              placeholder="Titre"
+            />
+            <input type="number" id="income-amount" placeholder="Montant" />
+            <button class="submit" id="income-amount-button">Ajouter</button>
+          </div>
+
+          <!-- Expenditure -->
+          <div class="expense-amount-container">
+            <h3>Dépense(s)</h3>
+            <p class="hide error" id="product-title-error">
+              Values cannot be empty
+            </p>
+            <input
+              type="text"
+              class="product-title"
+              id="product-title"
+              placeholder="Titre"
+            />
+            <input type="number" id="expense-amount" placeholder="Montant" />
+            <button class="submit" id="expense-amount-button">Ajouter</button>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="output-container flex-space">
+          <div>
+            <p>Revenu Total</p>
+            <span id="income-value">0</span>
+          </div>
+          <div>
+            <p>Dépense Total</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>Solde</p>
+            <span id="balance-amount">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list">
+        <h3 align="center">Opérations</h3>
+        <div class="list-container" id="list"></div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
